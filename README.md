@@ -1,0 +1,33 @@
+# 嵌入式Linux学习笔记
+
+## 关于本仓库
+本仓库记录嵌入式Linux系统学习过程中的理论知识、调试经验和项目复盘。
+目标是构建完整的嵌入式Linux知识体系，从C语言基础到应用开发再到驱动开发。
+
+## 目录结构
+- `01_C语言基础补充/` - C语言核心知识查漏补缺
+- `调试记录/` - 遇到的Bug与解决方案
+
+## 学习进度
+
+### C语言基础补充 
+- [x] 数据类型、运算符和表达式
+- [x] 输入输出
+- [x] 流程控制
+- [x] 数组
+- [x] 指针
+- [ ] 函数
+
+### 数据结构
+
+## 环境说明
+
+- 操作系统：Ubuntu 22.04
+- 目标平台：i.MX6ULL
+- 编辑工具：VS Code + Remote-SSH
+- 版本管理：Git + GitHub
+
+## 相关仓库
+- 笔记整理：[Embedded-notes](https://github.com/lincait/Embedded-notes)
+- 代码练习：[LinuxC-practice](https://github.com/lincait/LinuxC-practice)
+- 开发板学习：

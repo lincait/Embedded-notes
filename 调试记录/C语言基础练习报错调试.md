@@ -20,8 +20,17 @@
 
 # 2026.05.26
 
-报错：`Segmentation fault (core dumped)`
+报错：`Segmentation fault (core dumped)`，段错误
 
 原因：内存访问越界。由于使用错误的下标，导致数组访问越界
 
 解决：在循环中由于`i`和`j`混用漏改了，检查并改回去
+
+# 2026.05.29
+
+警告：`assignment discards ‘const’ qualifier from pointer target type`
+
+原因：把一个指向只读数据的指针`const char *`，赋给一个可以修改数据的指针`char *`，这可能导致后续通过这个可修改的指针误修改只读数据。
+
+解决：把可以修改数据的指针也用`const`修饰。
+
