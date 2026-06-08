@@ -42,3 +42,11 @@
 
 解决：定义数组时，没限定长度却赋值了，`char ch_num2[] = {0};`，导致数组默认只有一位，后续操作直接溢出。
 
+# 2026.06.08
+
+报错：xxxxxx’declared inside parameter list will not be visible of this definition or declare
+
+原因：某个函数声明时，需要的参数类型没有被外部可见、没有定义或没有声明
+
+解决：在定义结构体时，先写结构体的描述，再声明函数，注意先后顺序。
+
