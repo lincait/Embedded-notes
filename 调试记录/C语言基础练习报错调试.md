@@ -36,7 +36,7 @@
 
 # 2026.06.02
 
-报错：stack smashing detected: terminated  Aborted (core dumped)
+报错：`stack smashing detected: terminated  Aborted (core dumped)`
 
 原因：栈溢出触发栈保护，程序发生了**栈缓冲区溢出**，导致栈上的关键数据被非法改写。
 
@@ -44,7 +44,7 @@
 
 # 2026.06.08
 
-报错：xxxxxx’declared inside parameter list will not be visible of this definition or declare
+报错：`xxxxxx’declared inside parameter list will not be visible of this definition or declare`
 
 原因：某个函数声明时，需要的参数类型没有被外部可见、没有定义或没有声明
 
