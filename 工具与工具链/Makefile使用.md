@@ -1,6 +1,8 @@
 # 作用及说明
 
-编写`Makefile`就是编写一系列规则，用于告诉`make`如何执行这些规则，最终生成期望的文件。在编译大型程序时，全量编译非常耗时，在只改动几个文件时就需要用`Makefile`实现增量编译
+编写`Makefile`就是编写一系列规则，用于告诉`make`如何执行这些规则，最终生成期望的文件。在编译大型程序时，全量编译非常耗时，在只改动几个文件时就需要用`Makefile`实现增量编译。
+
+make在执行规则时，**比较目标文件与所有依赖文件的最后修改时间**，如果任何一个依赖文件比目标文件新，make就会执行规则下面的命令。
 
 `Makefile`的优先级比`makefile`低。
 
@@ -12,8 +14,6 @@
 目标文件: 依赖文件1 依赖文件2
 	命令（必须tab缩进）
 ```
-
-make 在执行这条规则前，会比较目标文件与所有依赖文件的最后修改时间。如果任何一个依赖文件比目标文件新，make就会执行下面的命令。
 
 make默认执行第一条规则，因此把最终要的可执行文件放第一个。遇到没有的文件会自己去执行后面的规则。
 
@@ -65,11 +65,11 @@ LDLIBS = -lm			#链接库
 world: hello.o main.o
 	gcc hello.o main.o -o world
 
-# 编译 hello.c:
+# 编译出hello.o:
 hello.o: hello.c hello.h
 	gcc hello.c -c -Wall -g -o hello.o
 
-# 编译 main.c:
+# 编译出main.o:
 main.o: main.c hello.h
 	gcc main.c -c -Wall -g -o main.o
 
