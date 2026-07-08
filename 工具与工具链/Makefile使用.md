@@ -56,7 +56,7 @@ LDLIBS = -lm			#链接库
 
 假设有一个项目，包含`hello.c`、`hello.h`和`main.c`。且`main.c`引用了头文件`hello.h`。逻辑如下：
 
-先用`hello.c`编译出`hello.o`，用`main.c`和`hello.h`编译出`main.o`，然后再链接成`world.out`。
+先用`hello.c`和`hello.h`编译出`hello.o`，用`main.c`和`hello.h`编译出`main.o`，然后再链接成`world`。
 
 ## 编写Makefile
 
@@ -66,7 +66,7 @@ world: hello.o main.o
 	gcc hello.o main.o -o world
 
 # 编译 hello.c:
-hello.o: hello.c
+hello.o: hello.c hello.h
 	gcc hello.c -c -Wall -g -o hello.o
 
 # 编译 main.c:
