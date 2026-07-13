@@ -1,5 +1,7 @@
 # C标准IO库函数
 
+以下介绍一些常见函数，还有`fwrite`、`fread`等等很多库函数。
+
 ## 打开/关闭文件
 
 - `FILE *fopen(char *, char *)`：
